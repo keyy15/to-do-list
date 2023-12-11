@@ -32,14 +32,14 @@ const App = () => {
   return (
     <div className='w-full h-full flex flex-col items-center justify-center'>
       <h2 className='w-[80%] h-full p-4 border-b'>Sticky Wall</h2>
-      <div className='w-[80%] h-full flex flex-wrap justify-between p-4 gap-2'>
+      <div className='w-[80%] h-full grid grid-cols-3 p-4 gap-2'>
         {todos.map((todo, index) => (
           <div
             key={index}
             className='w-[240px] h-[240px] flex flex-col items-center justify-center rounded-xl'
             style={{ backgroundColor: todo.color }}
           >
-            <h2 className='text-2xl'>{todo.text}</h2>
+            <h2 className='text-2xl bg-slate-400 rounded text-center '>{todo.text}</h2>
           </div>
         ))}
         {showInput ? (
@@ -59,7 +59,7 @@ const App = () => {
             onClick={() => setShowInput(true)}
           >
             <div className='flex items-center justify-center w-full h-full'>
-              <IoIosAdd className='text-3xl bg-teal-400 rounded' />
+              <IoIosAdd className='text-7xl rounded' />
             </div>
           </div>
         )}
